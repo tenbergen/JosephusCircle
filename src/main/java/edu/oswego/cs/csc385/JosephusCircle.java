@@ -76,8 +76,8 @@ public abstract class JosephusCircle implements Runnable {
 	public void run() {
 //		this.algorithm();
 		for (int i = 0; i < this.iterations; i++) {
-                    try { Thread.sleep(100); } catch (Exception e) {} // just to slow things down for profiling...
-                    this.algorithm();
+                    try { Thread.sleep(10); } catch (Exception e) {} // just to slow things down for profiling...
+                    this.lastManStanding = this.algorithm();
                 }
 	}
 }

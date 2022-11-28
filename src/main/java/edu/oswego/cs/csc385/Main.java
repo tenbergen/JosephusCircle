@@ -19,14 +19,14 @@ public class Main {
         //try { Thread.sleep(30000); } catch (Exception e) { } // just to slow things down for profiling...
 
         java.util.Random r = new java.util.Random();
-        int p = r.nextInt(100) + 1;
+        int p = r.nextInt(1000) + 1;
         int c = r.nextInt(100) + 1;
-        int i = r.nextInt(1000000) + 1;
+        int i = r.nextInt(1000) + 1;
 
         System.out.println("Starting Algorithm Threads with: ");
-        System.out.println("  p = " + p);
-        System.out.println("  c = " + c);
-        System.out.println("  i = " + i);
+        System.out.println("  Number of Soldiers             = " + p);
+        System.out.println("  Magic Number to which to count = " + c);
+        System.out.println("  Number of iterations           = " + i);
 
         JosephusCircle jc1 = new Algorithm1(p, c, i);
         JosephusCircle jc2 = new Algorithm2(p, c, i);
@@ -39,11 +39,19 @@ public class Main {
         //Sets the name of the threads... just for convenience in TPTP
         a1.setName("Algorithm1");
         a2.setName("Algorithm2");
-        a3.setName("Algoritum3");
+        a3.setName("Algorithm3");
 
+        System.out.print("Starting algorithm threads ");
         a1.start();
         a2.start();
         a3.start();
+
+        System.out.println("and waiting for them to terminate...\n");
+        try {
+            a1.join();
+            a2.join();
+            a3.join();
+        } catch (InterruptedException e) { }
 
         System.out.println(a1.getName() + " said the Last Man Standing is: " + jc1.lastManStanding);
         System.out.println(a2.getName() + " said the Last Man Standing is: " + jc2.lastManStanding);
