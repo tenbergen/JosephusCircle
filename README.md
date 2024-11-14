@@ -14,7 +14,7 @@ to historical sciences. For example, he tells the story about how he escaped cer
 -- just by being at the right time in the right place: play the game of eeny meeny miney moe.
 </p>
 <p>
-Legend has it that Josephus and 40 soldiers fled from occupation through the toman empire and hid in caves in the mountains. Surrounded by
+Legend has it that Josephus and 40 soldiers fled from occupation through the Roman empire and hid in caves in the mountains. Surrounded by
 Roman legions, they saw now way out except -- of course -- to kill themselves. Just like Klingons,
 they thought it better to be dead than to be imprisoned.
 </p>
